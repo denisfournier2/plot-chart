@@ -1,0 +1,16 @@
+/* generate chart button */
+
+button{
+    background: #017eff;
+    color: #fff;
+    border: none;
+    width: 130px;
+    height: 40px;
+    font-size: 0.7rem;
+    position: absolute;
+    bottom: 10px;
+}
+
+button:active{
+    background: #0169d1;
+}

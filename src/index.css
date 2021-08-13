@@ -1,0 +1,80 @@
+/* external fonts */
+
+@font-face {
+    font-family: "SourceCodePro";
+    src: url("./fonts/SourceCodePro-Regular.ttf");
+}
+
+@font-face {
+    font-family: "SourceSansPro";
+    src: url("./fonts/SourceSansPro-Regular.ttf");
+}
+
+/* body settings */
+
+body{
+    background: #dddee1;
+    margin: 0;
+    padding: 0;
+    font-family: "SourceSansPro";
+}
+
+/* Sizing main divs */
+
+.App{
+    padding: 0 5%;
+}
+
+.Header{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+
+.Content{
+    background: #fff;
+    width: 100%;
+    height: calc(100vh - 120px);
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.Footer{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+
+/* styling title */
+
+h2{
+    color: #2e3440;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Styling CodeEditor */
+.Ace{
+    width: 100%;
+    height: 40vh;
+    resize: vertical;
+    overflow: auto;
+    background-color: #2e3440;
+    border-bottom: 1px solid #999;
+}
+
+.AceEditor{
+    overflow: auto;
+}
+/* Styling chart */
+.chart{
+    min-height: 200px;
+    min-width: 300px;
+    width: calc(100% - 60px);
+    height: 100%;
+    margin: 15px 0 15px 30px;
+}
