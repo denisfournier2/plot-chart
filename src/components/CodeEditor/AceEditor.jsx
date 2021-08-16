@@ -1,16 +1,16 @@
 import React from "react";
 import AceEditor from "react-ace";
+import './AceEditor.css'
 
 import "ace-builds/src-noconflict/mode-java";
 import "ace-builds/src-noconflict/theme-monokai";
 import "ace-builds/src-noconflict/ace"
 import "ace-builds/webpack-resolver"
 
-
 function Ace(props) {
   function onChange(newValue) {
     props.onChanged(newValue)
-  }  
+  }
 
     return (
       <div className="Ace">

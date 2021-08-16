@@ -1,6 +1,6 @@
 import React from 'react'
 import './Chart.css'
-import Chart2 from './Chart2'
+import GenChart from './GenChart'
 
 function Chart(props){
     const data = props.data
@@ -15,7 +15,8 @@ function Chart(props){
     let maxB = []
     let labelMin = []
     let labelMax = []
-    let colors = ['green', 'darkgreen', 'purple', 'dark', 'lightblue', 'blue', 'yellow', 'orange']
+    let colorsMin = ['green', 'darkgreen', 'purple', 'dark']
+    let colorsMax = ['lightblue', 'blue', 'yellow', 'orange']
 
     // First line - verifying for start the process
 
@@ -44,7 +45,7 @@ function Chart(props){
             } else if((data[i].timestamp === end)){
                 minB[i - minA.length - 2] = data[i].min_response_time
                 maxB[i - maxA.length - 2] = data[i].max_response_time
-                labelMax[i-labelMax.length - 3] = data[i].os + ' ' + data[i].browser + ' ' + select[1]
+                labelMax[i - maxA.length - 2] = data[i].os + ' ' + data[i].browser + ' ' + select[1]
             } else{
                 console.log('Timestamp error: type data and span not corresponding')
             }
@@ -60,53 +61,22 @@ function Chart(props){
         console.log('Error, define the stop command to stop the process')
     }
 
-    /* const list = labels.map((labels, i) => {
-
-        return(
-            <li className={colors[i]} key={i} >
-                <i className="fas fa-circle"></i> {labels}
-            </li>
-        )
-    });*/
-
     return(
-        <Chart2
+        <GenChart
             begin = {begin}
             end = {end}
             labelMin = {labelMin}
             labelMax = {labelMax}
             lengthMax = {labelMax.length}
             lengthMin = {labelMin.length}
-            background = {colors}
+            colorsMin = {colorsMin}
+            colorsMax = {colorsMax}
             group = {group}
             minA = {minA}
             minB = {minB}
             maxA = {maxA}
             maxB = {maxB}
         />
-        /*<div className="chart">
-            <div className="fields">
-                <div className="xy">
-                    <div className="chartFields">
-                        <i className="fas fa-circle"></i>
-                        <div className="line"></div>
-                        <i className="fas fa-circle"></i>
-                    </div>
-                </div>
-                <div className="space"></div>
-                <div className="interval">
-                    <span>00:0{parseInt((begin / (1000 * 60)) % 60)}</span>
-                    <span>00:0{parseInt((end / (1000 * 60)) % 60)}</span>
-                </div>
-            </div>
-            <div className="labels">
-                <ul>
-                    {list}
-                    {console.log(labels)}
-                    {console.log(group)}
-                </ul>
-            </div>
-        </div>*/
     )
 }
 

@@ -3,6 +3,8 @@ import Ace from '../CodeEditor/AceEditor'
 import Chart from '../Charts/Chart';
 import GenChartButton from '../GenChartButton'
 import Code from '../../data/Code'
+import './Content.css'
+import ErrorBoundary from '../Error'
 
 function Content() {
   const string = JSON.stringify(Code)
@@ -13,12 +15,16 @@ function Content() {
     const PlotChart = JSON.parse(code)
     setData(PlotChart)
   }
-
+  
+  let code2 = code.replace(/},{/g, "},\n{")
+  
   return (
     <div className="Content">
-      <Ace data={code} onChanged={setCode} />
-      <Chart data={data} />
-      <GenChartButton onClick={generateChart} />
+      <ErrorBoundary>
+        <Ace data={code2} onChanged={setCode} />
+        <Chart data={data} />
+        <GenChartButton onClick={generateChart} />
+      </ErrorBoundary>
     </div>
   );
 }

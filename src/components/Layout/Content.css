@@ -1,0 +1,8 @@
+.Content{
+    background: #fff;
+    width: 100%;
+    height: calc(100vh - 120px);
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}

@@ -1,77 +1,44 @@
 .chart{
-    width: calc(100% - 60px);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-}
-
-.chart .fields{
-    width: 70%;
-}
-
-.chart .interval{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    margin-top: -18px;
-    padding-top: 18px;
-}
-
-.labels{
-    width: 30%;
-    text-transform: capitalize;
-    font-weight: bold;
-    font-size: 0.8rem;
-    display: flex;
-    justify-content: flex-end;
-}
-
-.labels ul li{
-    margin-bottom: 10px;
-    list-style: none;
-}
-
-.labels ul li i{
-    margin-right: 5px;
-}
-
-.chart .xy{
-    background-image: url(../../imgs/chart.png);
-    background-size: contain;
-    width: 100%;
-    height: calc(95% - 10px);
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
+    width: calc(100% - 60px);
+    height: calc(50vh - 60px);
+    margin: 15px 0 15px 30px;
     flex-wrap: wrap;
-    border-top: #ccc 1px solid;
-    border-bottom: #ccc 1px solid;
+    align-items: flex-start;
 }
 
-.chart .xy .chartFields{
-    margin-left: 7px;
-    color: #26715d;
-    width: calc(100% - 12px);
+.chart .space{
+    width: 90%;
+    height: 13px;
+    position: absolute;
+    background: #fff;
+    margin-top: -15px;
+}
+
+.chart .lineChart{
+    width: 80%;
+    margin-bottom: 80px;
+    margin-top: -48px;
+}
+
+.chart .labels{
+    width: 20%;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: center;
 }
 
-.chart .xy .chartFields .line{
-    width: 100%;
-    height: 2px;
-    background-color: #26715d;
+.chart .labels ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 12px;
+    text-transform: capitalize;
+    line-height: 24px;
+    font-weight: bold;
 }
 
-.space{
-    height: 10px;
-    width: calc(100% - 30px);
-    margin-left: 15px;
-    margin-right: 15px;
-    border-left: 1px solid #544669;
-    border-right: 1px solid #544669;
-    margin-top: -5px;
-}
 
 /* colors labels */
 .green{
