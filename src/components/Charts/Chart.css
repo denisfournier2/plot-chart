@@ -1,3 +1,4 @@
+/* Defining the graphic space */
 .chart{
     display: flex;
     flex-direction: row;
@@ -17,6 +18,7 @@
     margin-top: -15px;
 }
 
+/* We get two parts. In the left, a line chart and in the right, the labels  */
 .chart .lineChart{
     width: 80%;
     margin-bottom: 80px;
@@ -29,6 +31,7 @@
     justify-content: center;
 }
 
+/* The list of the labels */
 .chart .labels ul{
     margin: 0;
     padding: 0;
@@ -40,7 +43,7 @@
 }
 
 
-/* colors labels */
+/* Setting colors for the labels */
 .green{
     color: #6dba52;
 }

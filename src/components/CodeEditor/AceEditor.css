@@ -1,3 +1,4 @@
+/* The div resizable */
 .Ace{
     width: 100%;
     height: calc(50vh - 60px);
@@ -7,9 +8,10 @@
     padding-top: 5px;
     background-color: #2e3440
 }
-
+/* Modifying the code editor theme */
 .ace-monokai{
 	background-color: #2e3440;
 	color: #e0e0e0 ;
     line-height: 18px;
+    font-family: "SourceCodePro";
 }

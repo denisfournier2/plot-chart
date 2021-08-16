@@ -4,7 +4,7 @@ import './GenChartButton.css'
 function Footer(props) {
   return (
     <div className="footer">
-      <button onClick={props.onClick}>
+      <button onClick={props.onClick}> {/* function trigger */}
         GENERATE CHART
       </button>
     </div>

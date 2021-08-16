@@ -3,6 +3,7 @@ import './Chart.css'
 import GenChart from './GenChart'
 
 function Chart(props){
+    /* These variables will receive as properties to generate the chart dataset */
     const data = props.data
     let group = []
     let select = []
@@ -60,6 +61,11 @@ function Chart(props){
     }else{
         console.log('Error, define the stop command to stop the process')
     }
+
+    /* The dataset will be assembled from two factors, point A (start) and point B (end).
+    The select attribute given in "start", will give us two data for the selection, which
+    in this case is the minimum response time and the maximum response time.
+    Also, we'll pass in some colors to be used to generate the graph. */
 
     return(
         <GenChart

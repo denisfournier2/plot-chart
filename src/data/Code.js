@@ -1,3 +1,4 @@
+//initial state for the aplication
 const Code = [
     {type: 'start', timestamp: 1519862400000, select: ['min_response_time', 'max_response_time'], group: ['os', 'browser']},
     {type: 'span', timestamp: 1519862400000, begin: 1519862400000, end: 1519862460000},

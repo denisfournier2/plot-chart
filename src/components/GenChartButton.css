@@ -1,12 +1,13 @@
-/* generate chart button */
+/* div footer styles */
 .footer{
-    position: fixed;
+    position: fixed; /* fixed on the bottom */
     bottom: 0;
     background: #dddee1;
     width: 100%;
     height: 56px;
 }
 
+/* generate chart button */
 button{
     background: #017eff;
     color: #fff;
